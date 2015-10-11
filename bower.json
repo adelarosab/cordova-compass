@@ -1,0 +1,23 @@
+{
+  "name": "cordova-compass",
+  "version": "0.1.0",
+  "authors": [
+    "Adrian de la Rosa <adrian@delarosab.me>"
+  ],
+  "description": "An element providing access to device compass for cordova applications.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "cordova",
+    "compass"
+  ],
+  "main": "cordova-compass.html",
+  "license": "https://raw.githubusercontent.com/adelarosab/cordova-compass/master/LICENSE",
+  "homepage": "https://github.com/adelarosab/cordova-compass/",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0"
+  }
+}
