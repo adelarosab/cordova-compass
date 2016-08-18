@@ -75,13 +75,14 @@
     </article>
 
     <script>
-      var compassEl = document.querySelector('cordova-compass');
+      const compassEl = document.querySelector('cordova-compass');
+      const needleEl = document.querySelector('.needle');
 
       compassEl.addEventListener(
         'heading-changed',
         function (heading) {
-          document.querySelector('.heading').innerHTMl =
-            ['NORTH', 'EAST', 'SOUTH', 'WEST'][Math.round(heading / 90)];
+          console.log(arguments);
+          needleEl.style.transform = `rotate(-${heading}deg)`;
         }
       );
     </script>

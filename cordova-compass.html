@@ -14,7 +14,9 @@ Example:
 -->
 <dom-module id="cordova-compass">
   <template>
-    <cordova-device ready="{{ready}}"></cordova-device>
+    <cordova-core
+      paused="{{_paused_}}"
+      ready="{{_ready_}}"></cordova-core>
   </template>
 </dom-module>
 <script src="cordova-compass.js"></script>
