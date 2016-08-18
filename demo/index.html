@@ -1,13 +1,89 @@
 <!doctype html>
 <html>
   <head>
+    <link rel="import" href="../cordova-compass.html">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>cordova-compass Demo</title>
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../cordova-compass.html">
+
+    <title>cordova-geolocation Demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
   </head>
-  <body unresolved>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .compass {
+        background-color: #607d8b;
+        border-radius: 50%;
+        height: 90vw;
+        margin-left: 5vw;
+        margin-top: -45vw;
+        overflow: hidden;
+        position: fixed;
+        top: 50%;
+        width: 90vw;
+      }
+
+      .needle {
+        position: absolute;
+        top: 5vw;
+        height: 80vw;
+        left: 40vw;
+        width: 10vw;
+        transform-origin: 50%;
+        transform: rotate(50deg);
+      }
+
+      .compass:after,
+      .needle:before,
+      .needle:after {
+        border-left: 5vw solid transparent;
+        border-right: 5vw solid transparent;
+        content: '';
+        height: 0;
+        left: 0;
+        position: absolute;
+        width: 0;
+      }
+
+      .compass:after {
+        border-top: 5vw solid #455a64;
+        top: 0;
+        left: 50%;
+        margin-left: -5vw;
+      }
+
+      .needle:after {
+        border-bottom: 40vw solid #f44336;
+        top: 0;
+      }
+
+      .needle:before {
+        border-top: 40vw solid #bdbdbd;
+        top: 50%;
+      }
+    </style>
+
     <cordova-compass></cordova-compass>
+
+    <article class="compass">
+      <aside class="needle"></aside>
+    </article>
+
+    <script>
+      var compassEl = document.querySelector('cordova-compass');
+
+      compassEl.addEventListener(
+        'heading-changed',
+        function (heading) {
+          document.querySelector('.heading').innerHTMl =
+            ['NORTH', 'EAST', 'SOUTH', 'WEST'][Math.round(heading / 90)];
+        }
+      );
+    </script>
   </body>
 </html>

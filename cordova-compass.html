@@ -1,4 +1,6 @@
-<link rel="import" href="../polymer/polymer.html">
+<link href="../polymer/polymer.html"
+  rel="import">
+
 <!--
 An element providing access to device compass for cordova applications.
 
@@ -12,7 +14,7 @@ Example:
 -->
 <dom-module id="cordova-compass">
   <template>
-    <cordova-device id="enabler"></cordova-device>
+    <cordova-device ready="{{ready}}"></cordova-device>
   </template>
 </dom-module>
 <script src="cordova-compass.js"></script>
