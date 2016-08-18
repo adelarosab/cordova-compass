@@ -1,0 +1,24 @@
+<link href="../polymer/polymer.html"
+  rel="import">
+<link href="../cordova-core/cordova-core.html"
+  rel="import">
+
+<!--
+An element providing access to device compass for cordova applications.
+
+Example:
+
+    <cordova-compass></cordova-compass>
+
+@group Cordova Elements
+@element cordova-compass
+@demo demo/index.html
+-->
+<dom-module id="cordova-compass">
+  <template>
+    <cordova-core
+      paused="{{_paused_}}"
+      ready="{{_ready_}}"></cordova-core>
+  </template>
+  <script src="cordova-compass.js"></script>
+</dom-module>

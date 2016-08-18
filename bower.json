@@ -1,0 +1,15 @@
+{
+  "name": "cordova-compass",
+  "homepage": "https://github.com/adelarosab/cordova-compass",
+  "authors": [
+    "Adrian de la Rosa <adrian@delarosab.me>"
+  ],
+  "description": "Demo of cordova-compass",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cordova-compass": "^1.0.8",
+    "iron-component-page": "^1.1.7"
+  }
+}
