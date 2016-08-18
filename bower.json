@@ -4,7 +4,7 @@
   "authors": [
     "Adrian de la Rosa <adrian@delarosab.me>"
   ],
-  "description": "An element providing access to device compass for cordova applications.",
+  "description": "An element providing access to the device's compass.",
   "keywords": [
     "web-component",
     "web-components",

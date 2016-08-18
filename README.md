@@ -1,36 +1,38 @@
-# cordova-compass
+_[Demo and API docs](https://adelarosab.github.io/cordova-core)_
 
-An element providing access to device compass for cordova applications.
+### &lt;cordova-compass&gt;
+`<cordova-compass>` provides access to the device's compass.
 
+### Installation
+In your `www` project:
+```bash
+bower install --save cordova-compass
+```
 
-## Dependencies
+In your `cordova` project:
+```bash
+cordova plugin add cordova-plugin-device-orientation
+```
 
-Element dependencies are managed via [Bower](http://bower.io/). You can
-install that via:
+### Usage
+```html
+<cordova-compass
+  accuracy="1"
+  auto
+  delta="5"
+  heading="310"
+  loop
+  period="3000"
+  ready
+  timestamp="1471173266"
+></cordova-compass>
+```
 
-    npm install -g bower
+`<cordova-compass>` allow to read the state of the device's compass in the 
+current moment. `ready` means cordova is fully operative and `heading`  shows
+ the direction of the compass.
 
-Then, go ahead and download the element's dependencies:
+---
 
-    bower install
-
-
-## Playing With Your Element
-
-If you wish to work on your element in isolation, we recommend that you use
-[Polyserve](https://github.com/PolymerLabs/polyserve) to keep your element's
-bower dependencies in line. You can install it via:
-
-    npm install -g polyserve
-
-And you can run it via:
-
-    polyserve
-
-Once running, you can preview your element at
-`http://localhost:8080/components/cordova-compass/`, where `cordova-compass` is the name of the directory containing it.
-
-
-## Yeoman support
-
-If you'd like to use Yeoman to scaffold your element that's possible. The official [`generator-polymer`](https://github.com/yeoman/generator-polymer) generator has a [`seed`](https://github.com/yeoman/generator-polymer#seed) subgenerator.
+###### Note
+Due to restrictions `ready` attribute is not shown into attributes table.
