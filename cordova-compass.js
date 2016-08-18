@@ -66,7 +66,6 @@ Polymer(
       ready: {
         computed: '_computeReady(_ready_, _paused_)',
         notify: true,
-        observer: '_observeReady',
         type: Boolean,
         value: false
       },
@@ -125,17 +124,15 @@ Polymer(
      */
     watch() {
       if (this.ready) {
+        const errorCb = this._onError.bind(this);
         const fn = (this.loop) ? 'watchHeading' : 'getCurrentHeading';
         const optionsFn = {
           filter: this.delta,
           frecuency: this.period
         };
+        const successCb = this._onWatch.bind(this);
 
-        navigator.compass[fn](
-          this._onWatch.bind(this),
-          this._onError.bind(this),
-          optionsFn
-        );
+        this.watchId = navigator.compass[fn](successCb, errorCb, optionsFn);
       }
     }
   }
