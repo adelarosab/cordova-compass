@@ -1,4 +1,4 @@
-_[Demo and API docs](https://adelarosab.github.io/cordova-core)_
+_[Demo and API docs](https://adelarosab.github.io/cordova-compass)_
 
 ### &lt;cordova-compass&gt;
 `<cordova-compass>` provides access to the device's compass.
