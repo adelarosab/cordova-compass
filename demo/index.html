@@ -68,7 +68,9 @@
       }
     </style>
 
-    <cordova-compass></cordova-compass>
+    <cordova-compass
+      auto
+      loop></cordova-compass>
 
     <article class="compass">
       <aside class="needle"></aside>
@@ -80,9 +82,8 @@
 
       compassEl.addEventListener(
         'heading-changed',
-        function (heading) {
-          console.log(arguments);
-          needleEl.style.transform = `rotate(-${heading}deg)`;
+        function () {
+          needleEl.style.transform = `rotate(-${compassEl.heading}deg)`;
         }
       );
     </script>
