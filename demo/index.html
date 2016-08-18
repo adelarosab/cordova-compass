@@ -16,6 +16,12 @@
         box-sizing: border-box;
       }
 
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
       .compass {
         background-color: #607d8b;
         border-radius: 50%;
@@ -35,7 +41,7 @@
         left: 40vw;
         width: 10vw;
         transform-origin: 50%;
-        transform: rotate(50deg);
+        transition: transform .125s ease-out;
       }
 
       .compass:after,
