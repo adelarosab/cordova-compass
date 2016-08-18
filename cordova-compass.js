@@ -83,6 +83,10 @@ Polymer(
 
     observers: ['_observeReady(auto, ready)'],
 
+    _computeReady(ready, paused) {
+      return ready && !paused;
+    },
+
     _observeLoop(loop) {
       (loop) ? this.watch() : this.clearWatch();
     },
