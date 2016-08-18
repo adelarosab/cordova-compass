@@ -13,7 +13,7 @@ Polymer(
       hidden: true
     },
 
-    attributes: {
+    properties: {
       /**
        * The deviation in degrees between the reported heading and the true
        * heading.
